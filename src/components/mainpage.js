@@ -58,7 +58,8 @@ function Mainpage() {
         // headers.append('GET', 'POST', 'OPTIONS');
 
         fetch(
-            "http://127.0.0.1:8000/mainwork/create/",
+            // "http://127.0.0.1:8000/mainwork/create/",
+            "https://vjbanna21.pythonanywhere.com/mainwork/create/",
             {
                 headers: headers,
                 method: 'POST',
@@ -101,7 +102,7 @@ function Mainpage() {
 
     function deleteAllCheckboxes() {
 
-        fetch(`http://127.0.0.1:8000/mainwork/TruncateData/?userId=${userPk}`, {
+        fetch(`https://vjbanna21.pythonanywhere.com/mainwork/TruncateData/?userId=${userPk}`, {
             method: 'DELETE'
         })
             .then((data) => setListView(1))
@@ -151,7 +152,7 @@ function Mainpage() {
 
     function onDelete(e) {
         let id = e.target.id
-        fetch(`http://127.0.0.1:8000/mainwork/delete/${id}`, {
+        fetch(`https://vjbanna21.pythonanywhere.com/mainwork/delete/${id}`, {
             method: "DELETE"
         }
         )
@@ -168,7 +169,7 @@ function Mainpage() {
         let userPk = localStorage.getItem("userPk")
 
         if (listView === 1 || (sortType === 0 || 1 || 2 || 3 || 4)) {
-            fetch(`http://127.0.0.1:8000/mainwork/listView/?userId=${userPk}`)
+            fetch(`https://vjbanna21.pythonanywhere.com/mainwork/listView/?userId=${userPk}`)
                 .then((res) => res.json())
                 .then((data) => {
                 console.log('sortedArr .then')
