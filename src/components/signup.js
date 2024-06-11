@@ -30,7 +30,7 @@ function Signup({dispatch}) {
         console.log('fetch data')
         console.log(username)
         console.log(email,password)
-        fetch("http://127.0.0.1:8000/mainwork/UserSignUpView/",
+        fetch("https://vjbanna21.pythonanywhere.com/mainwork/UserSignUpView/",
            
         
         { method :'POST',
